@@ -1,6 +1,8 @@
 
-function PokemonCard({ pokemon }) {
-    console.log({ pokemon })
+function PokemonCard(props) {
+    console.log(props)
+
+    const pokemon = props.pokemon[0];
     return (
         <figure>
             {pokemon.imgSrc != null ? (<img src={pokemon.imgSrc} alt={pokemon.name} />) : (<p>"???"</p>)
@@ -15,12 +17,8 @@ export default PokemonCard
 
 
 
-
-
-// function PokemonCard(props) {
-//     console.log(props)
-
-//     const pokemon = props.pokemon[0];
+// function PokemonCard({ pokemon }) {
+//     console.log({ pokemon })
 //     return (
 //         <figure>
 //             {pokemon.imgSrc != null ? (<img src={pokemon.imgSrc} alt={pokemon.name} />) : (<p>"???"</p>)
