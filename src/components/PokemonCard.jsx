@@ -5,9 +5,9 @@ function PokemonCard({ pokemon }) {
     console.log({ pokemon })
     return (
         <figure>
-            {pokemon.imgSrc != null ? (<img src={pokemon.imgSrc} alt={pokemon.name} />) : (<p>"???"</p>)
+            {pokemon.imgSrc ? (<img src={pokemon.imgSrc} alt={pokemon.name} />) : (<p>"???"</p>)
             }
-            {pokemon.name != null ? (<figcaption>{pokemon.name}</figcaption>) : (<p>"???"</p>)
+            {pokemon.name ? (<figcaption>{pokemon.name}</figcaption>) : (<p>"???"</p>)
             }
         </figure >
     );
