@@ -1,8 +1,10 @@
 function NavBar({ setPokemonIndex, pokemonList }) {
     const handleClickPokemon = (index) => {
         setPokemonIndex(index);
+        if (pokemonList[index].name == "pikachu") {
+            alert("pika pikachu !!!");
+        }
     }
-
 
     return (
         <>

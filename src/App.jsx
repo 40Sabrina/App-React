@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useEffect } from "react";
 
 import "./App.css"
 
@@ -7,6 +8,14 @@ import PokemonCard from "./components/PokemonCard"
 
 
 function App() {
+  useEffect(
+    () => {
+      // console.log("hello pokemon trainer :)");
+      alert("hello pokemon trainer :)")
+    },
+    []
+  );
+
   const [pokemonIndex, setPokemonIndex] = useState(0);
 
   const pokemonList = [
@@ -35,9 +44,10 @@ function App() {
     },
   ];
 
+
   return (<>
     <PokemonCard pokemon={pokemonList[pokemonIndex]} />
-    <NavBar pokemonList={pokemonList} setPokemonIndex={setPokemonIndex} />
+    <NavBar useEffect={useEffect} pokemonList={pokemonList} setPokemonIndex={setPokemonIndex} />
   </>)
 }
 
